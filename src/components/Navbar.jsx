@@ -1,19 +1,19 @@
 import React from 'react';
-import {
-  MdRefresh,
-  MdOutlineHome,
-} from 'react-icons/md';
+import {MdOutlineHome} from 'react-icons/md';
+import {LiaRedoAltSolid} from "react-icons/lia";
 
 function Navbar(props) {
     return (
-      <div className="k-nav">
+      <div className='k-navhelper mt-4'>
+        <div className="k-nav">
           <div className="d-flex justify-content-around align-items-center">
               <div className="k-nav-page-title">
                 <MdOutlineHome />
-                <span>Home</span>
-                <MdRefresh />
+                <span>{props.pageName}</span>
+                <LiaRedoAltSolid />
               </div>
           </div>
+      </div>
       </div>
     );
 }
