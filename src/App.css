@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+html, body > #root > div {
+  /*height: 100%;*/
+  font: 20px 'Roboto', sans-serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url("https://endora.design/wp-content/uploads/2021/03/Kerala-fashion-Jewellers-2.jpg") center;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-div {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  position: absolute;
+
+  top: 5%;
+
 }
 
-.App-link {
-  color: #61dafb;
+.center-card {
+  height: 90%;
+  backdrop-filter: blur(40px);
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.k-navhelper{
+  width: 100%;
+  /*display: flex;*/
+  left: 25%;
+  height: 10%;
+  justify-content: center;
+  /*align-items: center;*/
+  position: absolute;
+}
+
+.k-nav {
+  /*position: absolute;*/
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 8px;
+  margin: 20px;
+  width: 50%;
+  backdrop-filter: blur(20px);
+  border-radius: 60px;
+}
+
+.k-nav-page-title {
+  width: 60%;
+  border-radius: 60px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+.k-left-pane {
+  display: flex;
+  flex-direction: column;
+  width: 5%;
+  height: 45%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.k-icon-wrapper {
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*background-color: #fff;*/
+}
+
+.k-icon-active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.text-light::placeholder {
+  color: #fff !important;
+  opacity: 0.6 !important;
 }
